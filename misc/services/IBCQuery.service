@@ -1,0 +1,13 @@
+[Unit]
+Description= IBC Packet Query
+
+[Service]
+Environment=IBC_BOT=5261353156:AAFQ-HZub5zhImgiuwaAyGL0HZf1lyOPgkI
+Environment=CHAT_ID=-680156376
+User=root
+ExecStart=/usr/bin/python3 -u /root/alert/IBCpacket/packetQuery.py
+Restart=always
+RestartSec=300
+
+[Install]
+WantedBy=multi-user.target

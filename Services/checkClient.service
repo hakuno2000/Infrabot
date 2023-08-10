@@ -1,0 +1,12 @@
+[Unit]
+Description = Check client last update time for chains
+
+[Service]
+Type = simple
+ExecStart = /usr/bin/python3 -u /root/Infrasmonitor/CheckClient/checkClient.py
+# Restart = on-failure
+User = root
+# RestartSec = 60
+
+[Install]
+WantedBy=multi-user.target

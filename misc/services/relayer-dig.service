@@ -1,0 +1,13 @@
+[Unit]
+Description= Dig Relayer
+
+[Service]
+Environment=DIG_BOT=5107365229:AAHKIaOydaNUcz0zzRICgxMge4xMR_8GfSQ
+Environment=CHAT_ID=-1001553574940
+User=root
+ExecStart=/usr/bin/python3 -u /root/alert/relayer/dig.py
+Restart=always
+RestartSec=10800
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description= Omniflix Relayer
+
+[Service]
+Environment=OMNIFLIX_BOT=5121141220:AAHyYUjpcEZfDLCHQHpoW4_hLED_bVzfIyQ
+Environment=CHAT_ID=-1001553574940
+User=root
+ExecStart=/usr/bin/python3 -u /root/alert/relayer/omniflixhub.py
+Restart=always
+RestartSec=10800
+
+[Install]
+WantedBy=multi-user.target

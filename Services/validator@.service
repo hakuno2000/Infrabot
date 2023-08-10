@@ -1,0 +1,13 @@
+[Unit]
+Description = Validator monitor for %i
+PartOf = validator.target
+
+[Service]
+Type = simple
+ExecStart = /usr/bin/python3 -u /root/Infrasmonitor/Validator/validator.py %i
+# Restart = on-failure
+User = root
+# RestartSec = 60
+
+[Install]
+WantedBy=validator.target

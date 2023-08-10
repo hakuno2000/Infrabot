@@ -1,0 +1,12 @@
+[Unit]
+Description = Upgrade monitor for chains
+
+[Service]
+Type = simple
+ExecStart = /usr/bin/python3 -u /root/Infrasmonitor/Upgrade/upgrade.py
+# Restart = on-failure
+User = root
+# RestartSec = 60
+
+[Install]
+WantedBy=multi-user.target
