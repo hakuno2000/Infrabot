@@ -82,3 +82,4 @@ if __name__ == "__main__":
     #     print("Sleeping for 10 seconds\n") # block time of umee
     #     time.sleep(10)
     queryClient('axelar-dojo-1', '07-tendermint-37')
+    queryClient('axelar-dojo-1', '07-tendermint-37')
