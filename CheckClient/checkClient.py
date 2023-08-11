@@ -20,7 +20,10 @@ warned = False
 
 def queryClient(chain, client):
 	message = subprocess.run(['hermes1.5','query','client','state', '--chain',f'{chain}', '--client', f'{client}'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	print(message.stdout.decode('utf-8'))
+	# print(message.stdout.decode('utf-8'))
+	message = json.loads(message.stdout.decode('utf-8'))
+	desChain = message['Tendermint']['ClientState']['chain_id']
+	print(desChain)
 
 def query(api, validator):
     global miss_counter, thread_id, warned
@@ -78,4 +81,4 @@ if __name__ == "__main__":
     #     query(umee["api"], umee["val"])
     #     print("Sleeping for 10 seconds\n") # block time of umee
     #     time.sleep(10)
-    queryClient('axelar-dojo-1', '07-tendermint-1')
+    queryClient('axelar-dojo-1', '07-tendermint-37')
