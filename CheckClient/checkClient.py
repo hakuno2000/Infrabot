@@ -28,13 +28,16 @@ def queryClient(chain, client):
 	for substr in message.split('\n'):
 		if " id: " in substr:
 			dest_chain_id = substr.split('id: ')[1]
-			print(dest_chain_id)
+	dest_chain_id = dest_chain_id.rstrip(',')
+	dest_chain_id = dest_chain_id.rstrip('"')
+	print(dest_chain_id)
                         
 	dest_chain_height = ""
 	for substr in message.split('\n'):
 		if " height: " in substr:
 			dest_chain_height = substr.split('height: ')[1]
-			print(dest_chain_height)
+	dest_chain_height = dest_chain_height.rstrip(',')
+	print(dest_chain_height)
 
 def query(api, validator):
     global miss_counter, thread_id, warned
