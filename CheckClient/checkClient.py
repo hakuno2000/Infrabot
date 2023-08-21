@@ -83,11 +83,11 @@ def queryRpcGetHeigt(rpc):
             
 def checkClientState(chain, client):
 	dest_chain_id, dest_chain_height = queryHermesGetClient(chain, client)
-	dest_chain_rpc = chains_data[dest_chain_id]["api"]
+	# dest_chain_rpc = chains_data[dest_chain_id]["api"]
 	dest_chain_current_height = queryRpcGetHeigt('https://rpc-injective-v7dtuhp57urhpzee-ie.internalendpoints.notional.ventures:443')
 
 	block_time = 6
-	last_update = (dest_chain_current_height - dest_chain_height) * block_time
+	last_update = (int(dest_chain_current_height) - int(dest_chain_height)) * block_time
 	limit = 86400
 	
 	if last_update > limit:
