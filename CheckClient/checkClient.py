@@ -114,7 +114,8 @@ if __name__ == "__main__":
 	#     print("Sleeping for 10 seconds\n") # block time of umee
 	#     time.sleep(10)
 
-	checkClientState('centauri-1', '07-tendermint-1')
+	# checkClientState('centauri-1', '07-tendermint-1')
 	for chain in clients_data:
 		for client in clients_data[chain]["clients"]:
+			# if client == '': continue
 			checkClientState(chain, client)
