@@ -3,7 +3,10 @@
 		"name": "Agoric",
 		"api": "https://agoric-api.polkachu.com",
 		"rpc": "https://agoric-rpc.polkachu.com",
-		"hash": "1884F4010BE1FE31B454A434FD7EC5933C39757E"
+		"hash": "1884F4010BE1FE31B454A434FD7EC5933C39757E",
+		"client": [
+			"07-tendermint-70"
+		]
 	},
 	"axelar-dojo-1": {
 		"name": "Axelar",
@@ -29,11 +32,14 @@
 		"api": "https://api-bitsong-tg6wetg74qbpuygq-ie.internalendpoints.notional.ventures",
 		"hash": "DC9ABBE8E5A7335D81A8E7BDA91D7B0EA32C823D"
 	},
-	"canto": {
+	"canto_7700-1": {
 		"name": "Canto",
 		"api": "https://api.canto.nodestake.top",
 		"rpc": "https://rpc.canto.nodestake.top",
-		"hash": "FB22C9B125AD355328640BD56F93EED51AA65F74"
+		"hash": "FB22C9B125AD355328640BD56F93EED51AA65F74",
+		"client": [
+			"07-tendermint-38"
+		]
 	},
 	"cheq": {
 		"name": "Cheq",
@@ -41,23 +47,41 @@
 		"api": "https://api-cheqd-ruc6vuacpkvmgvme-ie.internalendpoints.notional.ventures",
 		"hash": "82F41AEAE0AC7A81B2A130F9B62CBEFF1C620905"
 	},
-	"chihuahua": {
+	"chihuahua-1": {
 		"name": "Chihuahua",
 		"rpc": "https://rpc-chihuahua-ywzkuvmqsjvzvytm-ie.internalendpoints.notional.ventures",
 		"api": "https://api-chihuahua-yc3bk2ferjc93t7n-ie.internalendpoints.notional.ventures",
-		"hash": "C13AC76E729A4408F13A935220B1D5A674AD55CD"
+		"hash": "C13AC76E729A4408F13A935220B1D5A674AD55CD",
+		"client": [
+			"07-tendermint-175"
+		]
 	},
-	"composable": {
+	"centauri-1": {
 		"name": "Composable",
 		"rpc": "https://rpc-composable-pzavbtl2jmxk8wyc-ie.internalendpoints.notional.ventures",
 		"api": "https://api-composable-vpfsw5efpplj3au5-ie.internalendpoints.notional.ventures",
-		"hash": "59DCE7600A51390727E8BBD5B013DB03A63A00FA"
+		"hash": "59DCE7600A51390727E8BBD5B013DB03A63A00FA",
+		"client": [
+			"07-tendermint-1", "07-tendermint-6", "07-tendermint-7", "07-tendermint-14", "07-tendermint-25", "07-tendermint-26", "07-tendermint-30", "07-tendermint-31", "07-tendermint-46", "07-tendermint-50", "07-tendermint-51", "07-tendermint-52", "07-tendermint-66", "07-tendermint-67", "07-tendermint-68"
+		]
 	},
-	"gaia": {
+	"cosmoshub-4": {
 		"name": "Gaia",
 		"rpc": "https://rpc-cosmoshub-j2nfbupdbmvlxv2k-ie.internalendpoints.notional.ventures",
 		"api": "https://api-cosmoshub-5kpukvxbxhzmtkyg-ie.internalendpoints.notional.ventures",
-		"hash": "1BB296700D6FCF2318AADA2D098E4D40479B6C7E"
+		"hash": "1BB296700D6FCF2318AADA2D098E4D40479B6C7E",
+		"client": [
+			"07-tendermint-1150"
+		]
+	},
+	"crescent-1": {
+		"name": "Crescent",
+		"rpc": "https://crescent-rpc.polkachu.com/",
+		"api": "https://crescent-api.polkachu.com/",
+		"hash": "",
+		"client": [
+			"07-tendermint-112"
+		]
 	},
 	"cyber": {
 		"name": "Cyber",
@@ -71,11 +95,14 @@
 		"api": "https://api-emoney-gadpcktmgzsqmycl-ie.internalendpoints.notional.ventures",
 		"hash": "0F582D2C490BE99DF9D11AF4335567861700C0B8"
 	},
-	"evmos": {
+	"evmos_9001-2": {
 		"name": "Evmos",
 		"rpc": "https://rpc-evmos-ushmmehmvxl4lpsk-ie.internalendpoints.notional.ventures",
 		"api": "https://api-evmos-ffvc89aaqux65vz9-ie.internalendpoints.notional.ventures",
-		"hash": "FBC7E15255A18264C3AF14712F3C6A444B2412AF"
+		"hash": "FBC7E15255A18264C3AF14712F3C6A444B2412AF",
+		"client": [
+			"07-tendermint-111"
+		]
 	},
 	"fetch": {
 		"name": "Fetch.AI",
@@ -101,11 +128,14 @@
 		"api": "https://api-ixo-rhs7y9badkpcbc3g-ie.internalendpoints.notional.ventures",
 		"hash": "33E702E0A42967702B5D4319A26DB86BA0A99313"
 	},
-	"juno": {
+	"juno-1": {
 		"name": "Juno",
 		"rpc": "https://rpc-juno-babcbncrvr7wc2bq-ie.internalendpoints.notional.ventures",
 		"api": "https://api-juno-pe3w8buwzkdrksbs-ie.internalendpoints.notional.ventures",
-		"hash": "6EC804DBB72380D0AA5AC6A82650A1FA75FBABC5"
+		"hash": "6EC804DBB72380D0AA5AC6A82650A1FA75FBABC5",
+		"client": [
+			"07-tendermint-382"
+		]
 	},
 	"kava": {
 		"name": "Kava",
@@ -131,6 +161,15 @@
 		"rpc": "https://rpc-mars-syndatzqxqsxqzxq-ie.internalendpoints.notional.ventures",
 		"hash": "CDEBFE852B1C8A7DA4B37531B5CADF06E1A48D9B"
 	},
+	"neutron-1": {
+		"name": "Neutron",
+		"rpc": "https://neutron-rpc.polkachu.com/",
+		"api": "https://neutron-api.polkachu.com/",
+		"hash": "",
+		"client": [
+			"07-tendermint-29"
+		]
+	},
 	"noble": {
 		"name": "Noble",
 		"api": "https://api-noble-j2pchstrwubdkgxu-ie.internalendpoints.notional.ventures",
@@ -149,11 +188,14 @@
 		"api": "https://api-omniflixhub-rcbqsgqaudmuta9q-ie.internalendpoints.notional.ventures",
 		"hash": "2E530AEF6EF9B4497560EE670AD2F4996486BF98"
 	},
-	"osmosis": {
+	"osmosis-1": {
 		"name": "Osmosis",
 		"rpc": "https://rpc-osmosis-k5paa8zasfwqehxa-ie.internalendpoints.notional.ventures",
 		"api": "https://api-osmosis-rq7xwhzkwvv4ygtz-ie.internalendpoints.notional.ventures",
-		"hash": "D9EC9739CCCF051A05861ACB8A2218A9A4756390"
+		"hash": "D9EC9739CCCF051A05861ACB8A2218A9A4756390",
+		"client": [
+			"07-tendermint-2846"
+		]
 	},
 	"passage": {
 		"name": "Passage",
@@ -173,17 +215,29 @@
 		"rpc": "https://rpc-quasar-tg6jevdr3vsrd9qv-ie.internalendpoints.notional.ventures",
 		"hash": "FBBD731BE8513FFA738517C40FF723D4C054ED92"
 	},
-	"quicksilver": {
+	"quicksilver-2": {
 		"name": "Quicksilver",
 		"api": "https://api-quicksilver-r3u9yenyzbka3ldg-ie.internalendpoints.notional.ventures",
 		"rpc": "https://rpc-quicksilver-dtdv8lf9yywnma2y-ie.internalendpoints.notional.ventures",
-		"hash": "14B1A9BF60AC2A39199FCEDA7FFBE95500653601"
+		"hash": "14B1A9BF60AC2A39199FCEDA7FFBE95500653601",
+		"client": [
+			"07-tendermint-78"
+		]
 	},
 	"regen": {
 		"name": "Regen",
 		"rpc": "https://rpc-regen-zfwhvzqhfymmwky7-ie.internalendpoints.notional.ventures",
 		"api": "https://api-regen-mtlk2uvl5aaymwjm-ie.internalendpoints.notional.ventures",
 		"hash": "BA224E5B13AD05AAA86A2ECA876CB823D6388372"
+	},
+	"secret-4": {
+		"name": "Secret Network",
+		"rpc": "https://rpc-secret.whispernode.com",
+		"api": "https://lcd-secret.whispernode.com",
+		"hash": "",
+		"client": [
+			"07-tendermint-166"
+		]
 	},
 	"sei": {
 		"name": "Sei",
@@ -203,11 +257,14 @@
 		"rpc": "https://rpc-sommelier.pupmos.network",
 		"hash": "542FA4F53907A0E4CBBF601A7E6465D201371C65"
 	},
-	"stargaze": {
+	"stargaze-1": {
 		"name": "Stargaze",
 		"rpc": "https://rpc-stargaze-c7rfwhgjeeczbglw-ie.internalendpoints.notional.ventures",
 		"api": "https://api-stargaze-gnyxchbqaucrwafd-ie.internalendpoints.notional.ventures",
-		"hash": "EF4A8B7D36CAFB700A6B27453A78637CBA2B8B88"
+		"hash": "EF4A8B7D36CAFB700A6B27453A78637CBA2B8B88",
+		"client": [
+			"07-tendermint-279"
+		]
 	},
 	"starname": {
 		"name": "Starname",
@@ -215,11 +272,14 @@
 		"api": "https://api-starname-5vxynhw39buyxtkk-ie.internalendpoints.notional.ventures",
 		"hash": "A556774ABC39742ECF39A4228A4D759FE4D16E34"
 	},
-	"stride": {
+	"stride-1": {
 		"name": "Stride",
 		"rpc": "https://rpc-stride-ewdgpchtdztbbnnu-ie.internalendpoints.notional.ventures",
 		"api": "https://api-stride-pwhrqzkgxjvsbqhz-ie.internalendpoints.notional.ventures",
-		"hash": "1BB296700D6FCF2318AADA2D098E4D40479B6C7E"
+		"hash": "1BB296700D6FCF2318AADA2D098E4D40479B6C7E",
+		"client": [
+			"07-tendermint-126"
+		]
 	},
 	"teritori": {
 		"name": "Teritori",
@@ -227,16 +287,22 @@
 		"rpc": "https://teritori-rpc.brocha.in",
 		"hash": "AE65B8B71DE544D93A36E1CE0D6AD55E5CBFD421"
 	},
-	"umee": {
+	"umee-1": {
 		"name": "Umee",
 		"api": "https://api-umee-jvyurdwrjstysm76-ie.internalendpoints.notional.ventures",
 		"rpc": "https://rpc-umee-krsca29fr7y8jdb9-ie.internalendpoints.notional.ventures",
-		"hash": "2CB064741F8D8EE2C001EBADD557872266F5698C"
+		"hash": "2CB064741F8D8EE2C001EBADD557872266F5698C",
+		"client": [
+			"07-tendermint-230"
+		]
 	},
-	"whitewhale": {
+	"migaloo-1": {
 		"name": "WhiteWhale",
 		"api": "https://api-whitewhale-hdp4lpezc2jpmdtv-ie.internalendpoints.notional.ventures",
 		"rpc": "https://rpc-whitewhale-h93nh9ykmqnzbrez-ie.internalendpoints.notional.ventures",
-		"hash": "B8F80E90B3019465DF94B8984A0A4B2D26BC43CA"
+		"hash": "B8F80E90B3019465DF94B8984A0A4B2D26BC43CA",
+		"client": [
+			"07-tendermint-92"
+		]
 	}
 }
