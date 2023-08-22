@@ -86,10 +86,9 @@ def queryRpcGetHeigt(rpc):
             
 def checkClientState(chain, client):
 	dest_chain_id, dest_chain_height = queryHermesGetClient(chain, client)
-	# dest_chain_rpc = clients_data[dest_chain_id]["api"]
+	if dest_chain_id == '': return
 	dest_chain = clients_data[dest_chain_id]
 	# print(dest_chain)
-	if dest_chain_id == '': return
 	dest_chain_current_height = queryRpcGetHeigt(dest_chain["rpc"])
 
 	block_time = dest_chain["block_time"]
