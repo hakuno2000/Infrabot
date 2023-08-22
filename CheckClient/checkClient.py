@@ -19,7 +19,7 @@ thread_id=""
 warned = False
 
 def queryHermesGetClient(chain, client):
-	message = subprocess.run(['hermes1.5','query','client','state', '--chain',f'{chain}', '--client', f'{client}'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	message = subprocess.run(['hermes1.5', '--config', '~/.hermes/compo.toml', 'query', 'client', 'state', '--chain',f'{chain}', '--client', f'{client}'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	# print(message.stdout.decode('utf-8'))
 	message = message.stdout.decode('utf-8')
 	# print(message)
@@ -95,7 +95,7 @@ def checkClientState(chain, client):
 	last_update = (int(dest_chain_current_height) - int(dest_chain_height)) * block_time
 	limit = 86400
 	
-	print(f"Chain {chain}'s client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}")
+	print(f"Chain {chain['name']}'s client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}")
 	# if last_update > limit:
 	# 	if thread_id == "":
 	# 		message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated")
