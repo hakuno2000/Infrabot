@@ -39,7 +39,7 @@ def queryHermesGetClient(chain, client):
 	dest_chain_height = dest_chain_height.replace(',', '')
 	# print(dest_chain_height)
 
-	print(dest_chain_id, dest_chain_height)
+	# print(dest_chain_id, dest_chain_height)
 	return dest_chain_id, dest_chain_height
 
 def queryRpcGetHeigt(rpc):
@@ -52,7 +52,7 @@ def queryRpcGetHeigt(rpc):
 		request = requests.get(f"{rpc}/block", headers=header)
 		response = request.json()
 		height = response["result"]["block"]["header"]["height"]
-		print(height)
+		# print(height)
 		return height
 
         # if percentage > 80:
@@ -88,22 +88,23 @@ def checkClientState(chain, client):
 	# dest_chain_rpc = clients_data[dest_chain_id]["api"]
 	dest_chain = clients_data[dest_chain_id]
 	print(dest_chain)
-	dest_chain_current_height = queryRpcGetHeigt('https://rpc-injective-v7dtuhp57urhpzee-ie.internalendpoints.notional.ventures:443')
+	dest_chain_current_height = queryRpcGetHeigt(dest_chain["rpc"])
 
-	block_time = 6
+	block_time = dest_chain["block_time"]
 	last_update = (int(dest_chain_current_height) - int(dest_chain_height)) * block_time
 	limit = 86400
 	
-	if last_update > limit:
-		if thread_id == "":
-			message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated")
-		else: 
-			message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated", thread_id)
+	print(f"Chain {dest_chain['name']} client last updated height is {dest_chain_height} and current height is {dest_chain_current_height}")
+	# if last_update > limit:
+	# 	if thread_id == "":
+	# 		message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated")
+	# 	else: 
+	# 		message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated", thread_id)
 
 if __name__ == "__main__":
 	# Reads chains-data file relative to the location of this file.
 	root_dir = parent_dir_name(parent_dir_name(os.path.realpath(__file__)))
-	clients_data = os.path.join(root_dir, 'clients_data-data.json')
+	clients_data = os.path.join(root_dir, 'clients-data.json')
 	clients_data = json.load(open(clients_data))
 	# umee = chains_data["umee"]       
 	# umee["val"] = "umeevaloper1dmahqt84r9je3sqvljzjrttjj78cmrf39k5zhs"
@@ -114,3 +115,6 @@ if __name__ == "__main__":
 	#     time.sleep(10)
 
 	checkClientState('centauri-1', '07-tendermint-1')
+	for chain in clients_data:
+		for client in clients_data[chain]["clients"]:
+			checkClientState(chain, client)

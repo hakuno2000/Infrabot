@@ -6,13 +6,18 @@
 		"hash": "1884F4010BE1FE31B454A434FD7EC5933C39757E",
 		"client": [
 			"07-tendermint-70"
-		]
+		],
+		"block_time": 6
 	},
 	"axelar-dojo-1": {
 		"name": "Axelar",
 		"api": "https://api-axelar-tyf23vj3gvwffegd-ie.internalendpoints.notional.ventures",
 		"rpc": "https://rpc-axelar-hxvqgbuustprtf6g-ie.internalendpoints.notional.ventures",
-		"hash": ""
+		"hash": "",
+		"client": [
+			"07-tendermint-161"
+		],
+		"block_time": 6
 	},
 	"akash": {
 		"name": "Akash",
@@ -39,7 +44,8 @@
 		"hash": "FB22C9B125AD355328640BD56F93EED51AA65F74",
 		"client": [
 			"07-tendermint-38"
-		]
+		],
+		"block_time": 6
 	},
 	"cheq": {
 		"name": "Cheq",
@@ -54,7 +60,8 @@
 		"hash": "C13AC76E729A4408F13A935220B1D5A674AD55CD",
 		"client": [
 			"07-tendermint-175"
-		]
+		],
+		"block_time": 6
 	},
 	"centauri-1": {
 		"name": "Composable",
@@ -63,7 +70,8 @@
 		"hash": "59DCE7600A51390727E8BBD5B013DB03A63A00FA",
 		"client": [
 			"07-tendermint-1", "07-tendermint-6", "07-tendermint-7", "07-tendermint-14", "07-tendermint-25", "07-tendermint-26", "07-tendermint-30", "07-tendermint-31", "07-tendermint-46", "07-tendermint-50", "07-tendermint-51", "07-tendermint-52", "07-tendermint-66", "07-tendermint-67", "07-tendermint-68"
-		]
+		],
+		"block_time": 6
 	},
 	"cosmoshub-4": {
 		"name": "Gaia",
@@ -72,7 +80,8 @@
 		"hash": "1BB296700D6FCF2318AADA2D098E4D40479B6C7E",
 		"client": [
 			"07-tendermint-1150"
-		]
+		],
+		"block_time": 6
 	},
 	"crescent-1": {
 		"name": "Crescent",
@@ -81,7 +90,8 @@
 		"hash": "",
 		"client": [
 			"07-tendermint-112"
-		]
+		],
+		"block_time": 6
 	},
 	"cyber": {
 		"name": "Cyber",
@@ -102,7 +112,8 @@
 		"hash": "FBC7E15255A18264C3AF14712F3C6A444B2412AF",
 		"client": [
 			"07-tendermint-111"
-		]
+		],
+		"block_time": 6
 	},
 	"fetch": {
 		"name": "Fetch.AI",
@@ -135,7 +146,8 @@
 		"hash": "6EC804DBB72380D0AA5AC6A82650A1FA75FBABC5",
 		"client": [
 			"07-tendermint-382"
-		]
+		],
+		"block_time": 6
 	},
 	"kava": {
 		"name": "Kava",
@@ -168,7 +180,8 @@
 		"hash": "",
 		"client": [
 			"07-tendermint-29"
-		]
+		],
+		"block_time": 6
 	},
 	"noble": {
 		"name": "Noble",
@@ -195,7 +208,8 @@
 		"hash": "D9EC9739CCCF051A05861ACB8A2218A9A4756390",
 		"client": [
 			"07-tendermint-2846"
-		]
+		],
+		"block_time": 6
 	},
 	"passage": {
 		"name": "Passage",
@@ -222,7 +236,8 @@
 		"hash": "14B1A9BF60AC2A39199FCEDA7FFBE95500653601",
 		"client": [
 			"07-tendermint-78"
-		]
+		],
+		"block_time": 6
 	},
 	"regen": {
 		"name": "Regen",
@@ -237,7 +252,8 @@
 		"hash": "",
 		"client": [
 			"07-tendermint-166"
-		]
+		],
+		"block_time": 6
 	},
 	"sei": {
 		"name": "Sei",
@@ -264,7 +280,8 @@
 		"hash": "EF4A8B7D36CAFB700A6B27453A78637CBA2B8B88",
 		"client": [
 			"07-tendermint-279"
-		]
+		],
+		"block_time": 6
 	},
 	"starname": {
 		"name": "Starname",
@@ -279,7 +296,8 @@
 		"hash": "1BB296700D6FCF2318AADA2D098E4D40479B6C7E",
 		"client": [
 			"07-tendermint-126"
-		]
+		],
+		"block_time": 6
 	},
 	"teritori": {
 		"name": "Teritori",
@@ -294,7 +312,8 @@
 		"hash": "2CB064741F8D8EE2C001EBADD557872266F5698C",
 		"client": [
 			"07-tendermint-230"
-		]
+		],
+		"block_time": 6
 	},
 	"migaloo-1": {
 		"name": "WhiteWhale",
@@ -303,6 +322,7 @@
 		"hash": "B8F80E90B3019465DF94B8984A0A4B2D26BC43CA",
 		"client": [
 			"07-tendermint-92"
-		]
+		],
+		"block_time": 6
 	}
 }
