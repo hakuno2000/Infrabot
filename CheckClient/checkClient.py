@@ -95,7 +95,8 @@ def checkClientState(chain, client):
 	last_update = (int(dest_chain_current_height) - int(dest_chain_height)) * block_time
 	limit = 86400
 	
-	print(f"Chain {clients_data[chain]['name']}'s client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}")
+	# print(f"Chain {clients_data[chain]['name']}'s client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}")
+	message(os.getenv("PI"), f"Chain {clients_data[chain]['name']}'s client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}")
 	# if last_update > limit:
 	# 	if thread_id == "":
 	# 		message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated")
