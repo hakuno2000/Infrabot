@@ -95,10 +95,12 @@ def lastUpdateTime(last_block, current_block, block_time):
 
 def checkClientState(chain, client):
 	dest_chain_id, dest_chain_height = queryHermesGetClient(chain, client)
+	dest_chain_height = int(dest_chain_height)
 	if dest_chain_id == '': return
 	dest_chain = clients_data[dest_chain_id]
 	# print(dest_chain)
 	dest_chain_current_height = queryRpcGetHeigt(dest_chain["rpc"])
+	dest_chain_current_height = int(dest_chain_current_height)
 
 	block_time = dest_chain["block_time"]
 	last_update = (int(dest_chain_current_height) - int(dest_chain_height)) * block_time
@@ -106,8 +108,8 @@ def checkClientState(chain, client):
 	
 	last_hour, last_minute, last_second = lastUpdateTime(dest_chain_height, dest_chain_current_height, block_time)
 
-	print(f"Chain {clients_data[chain]['name']}'s client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
-	# message(os.getenv("PI"), f"Chain {clients_data[chain]['name']}'s client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}")
+	# print(f"Chain {clients_data[chain]['name']}'s client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
+	message(os.getenv("PI"), f"{clients_data[chain]['name']} client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
 	# if last_update > limit:
 	# 	if thread_id == "":
 	# 		message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated")
