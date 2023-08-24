@@ -19,7 +19,7 @@ thread_id=""
 warned = False
 
 def queryHermesGetClient(chain, client):
-	message = subprocess.run(['hermes1.5', '--config', '../.hermes/compo.toml', 'query', 'client', 'state', '--chain',f'{chain}', '--client', f'{client}'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	message = subprocess.run(['hermes1.5', '--config', '/root/.hermes/compo.toml', 'query', 'client', 'state', '--chain',f'{chain}', '--client', f'{client}'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	# print(message.stdout.decode('utf-8'))
 	message = message.stdout.decode('utf-8')
 	# print(message)
