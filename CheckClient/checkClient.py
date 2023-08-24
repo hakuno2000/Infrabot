@@ -109,12 +109,14 @@ def checkClientState(chain, client):
 	last_hour, last_minute, last_second = lastUpdateTime(dest_chain_height, dest_chain_current_height, block_time)
 
 	# print(f"Chain {clients_data[chain]['name']}'s client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
-	message(os.getenv("PI"), f"{clients_data[chain]['name']} client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
+	# message(os.getenv("PI"), f"{clients_data[chain]['name']} client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
 	# if last_update > limit:
 	# 	if thread_id == "":
 	# 		message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated")
 	# 	else: 
 	# 		message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated", thread_id)
+	if last_update > (limit // 2):
+		message(os.getenv("PI"), f"{clients_data[chain]['name']} client to {dest_chain['name']} is not updated, last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
 
 if __name__ == "__main__":
 	# Reads chains-data file relative to the location of this file.
