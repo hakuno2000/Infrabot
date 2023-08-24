@@ -85,7 +85,7 @@ def queryRpcGetHeigt(rpc):
 		traceback.print_exc()
             
 def lastUpdateTime(last_block, current_block, block_time):
-	time_passed = (current_block - last_block) // block_time
+	time_passed = (current_block - last_block) * block_time
 	second = int(time_passed)
 	minute = second // 60
 	second = second % 60
@@ -115,7 +115,7 @@ def checkClientState(chain, client):
 	# 		message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated")
 	# 	else: 
 	# 		message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated", thread_id)
-	if last_update > (limit // 2):
+	if last_update > limit:
 		message(os.getenv("PI"), f"{clients_data[chain]['name']} client to {dest_chain['name']} is not updated, last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
 
 if __name__ == "__main__":
