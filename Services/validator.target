@@ -1,6 +1,0 @@
-[Unit]
-Description=validator worker
-Requires=validator@akash.service validator@bitcanna.service validator@bitsong.service validator@canto.service validator@cheq.service validator@chihuahua.service validator@composable.service validator@gaia.service validator@cyber.service validator@emoney.service validator@evmos.service validator@fetch.service validator@genesis.service validator@injective.service validator@ixo.service validator@juno.service validator@kava.service validator@kichain.service validator@konstellation.service validator@mars.service validator@noble.service validator@nolus.service validator@omniflixhub.service validator@osmosis.service validator@passage.service validator@persistence.service validator@quasar.service validator@quicksilver.service validator@regen.service validator@sei.service validator@sentinel.service validator@sommelier.service validator@stargaze.service validator@starname.service validator@stride.service validator@teritori.service validator@umee.service validator@whitewhale.service
-
-[Install]
-WantedBy=multi-user.target

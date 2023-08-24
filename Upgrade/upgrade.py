@@ -154,9 +154,9 @@ def getUpdate():
                     print(f"{chain} need to upgrade")
                     str_time = (datetime.datetime.now().astimezone() + datetime.timedelta(seconds=timeToUpgrade) + datetime.timedelta(hours=7)).astimezone()
                     time = str_time.strftime("%H:%M %d/%m/%Y")
-                    res = message(os.getenv("MINH"), f"UPGRADE: *{chain}* at around *{time}*")
+                    res = message(os.getenv("PI"), f"UPGRADE: *{chain}* at around *{time}*")
                     thread_id = res.get("ts")
-                    message(os.getenv("MINH"), f"Name: *{chain}*\nProposal ID: *{upgradeList[chain]['id']}*\nBlock: *{upgradeList[chain]['height']}*\nVersion: *{upgradeList[chain]['version']}*\n", thread_id)
+                    message(os.getenv("PI"), f"Name: *{chain}*\nProposal ID: *{upgradeList[chain]['id']}*\nBlock: *{upgradeList[chain]['height']}*\nVersion: *{upgradeList[chain]['version']}*\n", thread_id)
 
             except Exception as e:
                 print(f"Error getting data from {urlString}: {e}")
@@ -175,7 +175,8 @@ if __name__ == "__main__":
     chains_data = os.path.join(root_dir, 'chains-data.json')
     chains_data = json.load(open(chains_data))
 
-    while True:
-        getUpdate()
-        print("Sleeping for 12 hours")
-        time.sleep(43200)
+    # while True:
+    #     getUpdate()
+    #     print("Sleeping for 12 hours")
+    #     time.sleep(43200)
+    getUpdate()
