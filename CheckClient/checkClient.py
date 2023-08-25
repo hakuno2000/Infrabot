@@ -83,6 +83,8 @@ def queryRpcGetHeigt(rpc):
         #     requests.post(URL, data=json.dumps(payload))
         #     warned = True
 		traceback.print_exc()
+		print("Failed to get height from RPC")
+		return ''
             
 def lastUpdateTime(last_block, current_block, block_time):
 	time_passed = (current_block - last_block) * block_time
