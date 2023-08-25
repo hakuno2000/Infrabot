@@ -2,7 +2,7 @@
 	"agoric-3": {
 		"name": "Agoric",
 		"api": "https://agoric-api.polkachu.com",
-		"rpc": "https://agoric-rpc.polkachu.com",
+		"rpc": "https://rpc-agoric-cur5tldlsvrynt9a-ie.internalendpoints.notional.ventures",
 		"hash": "1884F4010BE1FE31B454A434FD7EC5933C39757E",
 		"clients": [
 			"07-tendermint-70"
