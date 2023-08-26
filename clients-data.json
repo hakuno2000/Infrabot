@@ -45,7 +45,8 @@
 		"api": "https://api-composable-vpfsw5efpplj3au5-ie.internalendpoints.notional.ventures",
 		"hash": "59DCE7600A51390727E8BBD5B013DB03A63A00FA",
 		"clients": [
-			"07-tendermint-1", "07-tendermint-6", "07-tendermint-7", "07-tendermint-14", "07-tendermint-25", "07-tendermint-26", "07-tendermint-30", "07-tendermint-31", "07-tendermint-46", "07-tendermint-50", "07-tendermint-51", "07-tendermint-52", "07-tendermint-66", "07-tendermint-67", "07-tendermint-68"
+			"07-tendermint-1", "07-tendermint-6", "07-tendermint-7", "07-tendermint-14", "07-tendermint-25", "07-tendermint-26", "07-tendermint-30", "07-tendermint-31", "07-tendermint-46", "07-tendermint-50", "07-tendermint-51", "07-tendermint-52", "07-tendermint-66", "07-tendermint-67", "07-tendermint-68",
+			"07-tendermint-110", "07-tendermint-125", "07-tendermint-126", "07-tendermint-127", "07-tendermint-123"
 		],
 		"block_time": 6
 	},
@@ -79,6 +80,16 @@
 		],
 		"block_time": 6
 	},
+	"injective-1": {
+		"name": "Injective",
+		"rpc": "https://rpc-injective-v7dtuhp57urhpzee-ie.internalendpoints.notional.ventures",
+		"api": "https://api-injective-dpyy8unbmsjcdpqw-ie.internalendpoints.notional.ventures",
+		"hash": "",
+		"clients": [
+			"07-tendermint-207"
+		],
+		"block_time": 6
+	},
 	"juno-1": {
 		"name": "Juno",
 		"rpc": "https://rpc-juno-babcbncrvr7wc2bq-ie.internalendpoints.notional.ventures",
@@ -86,6 +97,16 @@
 		"hash": "6EC804DBB72380D0AA5AC6A82650A1FA75FBABC5",
 		"clients": [
 			"07-tendermint-382"
+		],
+		"block_time": 6
+	},
+	"kaiyo-1": {
+		"name": "Kujira",
+		"rpc": "https://rpc-kujira-vypnyvrxbc8sdzyk-ie.internalendpoints.notional.ventures",
+		"api": "https://api-kujira-pcd5tmmkl4xfjgjd-ie.internalendpoints.notional.ventures",
+		"hash": "",
+		"clients": [
+			"07-tendermint-147"
 		],
 		"block_time": 6
 	},
@@ -109,6 +130,16 @@
 		],
 		"block_time": 6
 	},
+	"core-1": {
+		"name": "Persistence",
+		"rpc": "https://rpc-persistent-ngwspf3eamyjzfqz-ie.internalendpoints.notional.ventures",
+		"api": "https://api-persistent-tbhdvxdsr5awb4gn-ie.internalendpoints.notional.ventures",
+		"hash": "D9EC9739CCCF051A05861ACB8A2218A9A4756390",
+		"clients": [
+			"07-tendermint-151"
+		],
+		"block_time": 6
+	},
 	"quicksilver-2": {
 		"name": "Quicksilver",
 		"api": "https://api-quicksilver-r3u9yenyzbka3ldg-ie.internalendpoints.notional.ventures",
@@ -116,6 +147,16 @@
 		"hash": "14B1A9BF60AC2A39199FCEDA7FFBE95500653601",
 		"clients": [
 			"07-tendermint-78"
+		],
+		"block_time": 6
+	},
+	"regen-1": {
+		"name": "Regen",
+		"api": "https://api-kujira-pcd5tmmkl4xfjgjd-ie.internalendpoints.notional.ventures",
+		"rpc": "https://rpc-kujira-vypnyvrxbc8sdzyk-ie.internalendpoints.notional.ventures",
+		"hash": "",
+		"clients": [
+			"07-tendermint-174"
 		],
 		"block_time": 6
 	},
@@ -165,7 +206,7 @@
 		"rpc": "https://rpc-whitewhale-h93nh9ykmqnzbrez-ie.internalendpoints.notional.ventures",
 		"hash": "B8F80E90B3019465DF94B8984A0A4B2D26BC43CA",
 		"clients": [
-			"07-tendermint-92"
+			"07-tendermint-92", "07-tendermint-110"
 		],
 		"block_time": 6
 	}
