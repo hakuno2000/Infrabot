@@ -18,8 +18,10 @@ miss_counter = 0
 thread_id=""
 warned = False
 
-def queryHermesGetClient(chain, client):
-	message = subprocess.run(['hermes1.5', '--config', '/root/.hermes/compo.toml', 'query', 'client', 'state', '--chain',f'{chain}', '--client', f'{client}'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+def queryHermesGetClient(chain, client, hermes_version):
+	# message = subprocess.run(['hermes1.5', '--config', '/root/.hermes/compo.toml', 'query', 'client', 'state', '--chain',f'{chain}', '--client', f'{client}'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	if hermes_version == "1.2": message = subprocess.run(['hermes1.2', 'query', 'client', 'state', '--chain',f'{chain}', '--client', f'{client}'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	else: message = subprocess.run(['hermes1.5', 'query', 'client', 'state', '--chain',f'{chain}', '--client', f'{client}'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	# print(message.stdout.decode('utf-8'))
 	message = message.stdout.decode('utf-8')
 	# print(message)
@@ -95,8 +97,8 @@ def lastUpdateTime(last_block, current_block, block_time):
 	minute = minute % 60
 	return hour, minute, second
 
-def checkClientState(chain, client):
-	dest_chain_id, dest_chain_height = queryHermesGetClient(chain, client)
+def checkClientState(chain, client, hermes_version):
+	dest_chain_id, dest_chain_height = queryHermesGetClient(chain, client, hermes_version)
 	if dest_chain_id == '': return
 	dest_chain_height = int(dest_chain_height)
 	dest_chain = clients_data[dest_chain_id]
@@ -111,7 +113,7 @@ def checkClientState(chain, client):
 	
 	last_hour, last_minute, last_second = lastUpdateTime(dest_chain_height, dest_chain_current_height, block_time)
 
-	# print(f"Chain {clients_data[chain]['name']}'s client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
+	print(f"{clients_data[chain]['name']} client to {dest_chain['name']} last updated is {dest_chain_height}, current is {dest_chain_current_height}, updated {last_hour}h {last_minute}m {last_second}s ago")
 	# message(os.getenv("PI"), f"{clients_data[chain]['name']} client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
 	# if last_update > limit:
 	# 	if thread_id == "":
@@ -138,4 +140,4 @@ if __name__ == "__main__":
 	for chain in clients_data:
 		for client in clients_data[chain]["clients"]:
 			# if client == '': continue
-			checkClientState(chain, client)
+			checkClientState(chain, client, chain["hermes"])

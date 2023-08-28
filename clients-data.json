@@ -7,7 +7,8 @@
 		"clients": [
 			"07-tendermint-70"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"axelar-dojo-1": {
 		"name": "Axelar",
@@ -15,9 +16,10 @@
 		"rpc": "https://rpc-axelar-hxvqgbuustprtf6g-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
-			"07-tendermint-161"
+			"07-tendermint-151"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"canto_7700-1": {
 		"name": "Canto",
@@ -27,7 +29,8 @@
 		"clients": [
 			"07-tendermint-38"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"chihuahua-1": {
 		"name": "Chihuahua",
@@ -37,7 +40,8 @@
 		"clients": [
 			"07-tendermint-175"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"centauri-1": {
 		"name": "Composable",
@@ -48,7 +52,8 @@
 			"07-tendermint-1", "07-tendermint-6", "07-tendermint-7", "07-tendermint-14", "07-tendermint-25", "07-tendermint-26", "07-tendermint-30", "07-tendermint-31", "07-tendermint-46", "07-tendermint-50", "07-tendermint-51", "07-tendermint-52", "07-tendermint-66", "07-tendermint-67", "07-tendermint-68",
 			"07-tendermint-110", "07-tendermint-125", "07-tendermint-126", "07-tendermint-127", "07-tendermint-123"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"cosmoshub-4": {
 		"name": "Gaia",
@@ -56,9 +61,10 @@
 		"api": "https://api-cosmoshub-5kpukvxbxhzmtkyg-ie.internalendpoints.notional.ventures",
 		"hash": "1BB296700D6FCF2318AADA2D098E4D40479B6C7E",
 		"clients": [
-			"07-tendermint-1150"
+			"07-tendermint-1150", "07-tendermint-1140"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"crescent-1": {
 		"name": "Crescent",
@@ -68,7 +74,8 @@
 		"clients": [
 			"07-tendermint-112"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"evmos_9001-2": {
 		"name": "Evmos",
@@ -78,7 +85,8 @@
 		"clients": [
 			"07-tendermint-111"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"injective-1": {
 		"name": "Injective",
@@ -88,7 +96,8 @@
 		"clients": [
 			"07-tendermint-207"
 		],
-		"block_time": 0.82
+		"block_time": 0.82,
+		"hermes": "1.5"
 	},
 	"juno-1": {
 		"name": "Juno",
@@ -98,7 +107,8 @@
 		"clients": [
 			"07-tendermint-382"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"kaiyo-1": {
 		"name": "Kujira",
@@ -108,7 +118,8 @@
 		"clients": [
 			"07-tendermint-147"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"neutron-1": {
 		"name": "Neutron",
@@ -118,7 +129,8 @@
 		"clients": [
 			"07-tendermint-29"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"osmosis-1": {
 		"name": "Osmosis",
@@ -126,9 +138,10 @@
 		"api": "https://api-osmosis-rq7xwhzkwvv4ygtz-ie.internalendpoints.notional.ventures",
 		"hash": "D9EC9739CCCF051A05861ACB8A2218A9A4756390",
 		"clients": [
-			"07-tendermint-2846"
+			"07-tendermint-2846", "07-tendermint-2790"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"core-1": {
 		"name": "Persistence",
@@ -138,7 +151,8 @@
 		"clients": [
 			"07-tendermint-151"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"quicksilver-2": {
 		"name": "Quicksilver",
@@ -148,7 +162,8 @@
 		"clients": [
 			"07-tendermint-78"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"regen-1": {
 		"name": "Regen",
@@ -158,7 +173,8 @@
 		"clients": [
 			"07-tendermint-174"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"secret-4": {
 		"name": "Secret Network",
@@ -168,7 +184,19 @@
 		"clients": [
 			"07-tendermint-166"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
+	},
+	"pacific-1": {
+		"name": "Sei",
+		"rpc": "https://rpc-sei-2ddf5gw4kqzcuymz-ie.internalendpoints.notional.ventures",
+		"api": "https://api-sei-k4gxhmmp48umfeht-ie.internalendpoints.notional.ventures",
+		"hash": "",
+		"clients": [
+			"07-tendermint-2", "07-tendermint-3", "07-tendermint-8", "07-tendermint-10", "07-tendermint-12", "07-tendermint-22"
+		],
+		"block_time": 0.37,
+		"hermes": "1.2"
 	},
 	"stargaze-1": {
 		"name": "Stargaze",
@@ -178,7 +206,8 @@
 		"clients": [
 			"07-tendermint-279"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"stride-1": {
 		"name": "Stride",
@@ -188,7 +217,19 @@
 		"clients": [
 			"07-tendermint-126"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
+	},
+	"phoenix-1": {
+		"name": "Terra 2.0",
+		"rpc": "https://rpc-terra2-dkhwvdfebur82wjj-ie.internalendpoints.notional.ventures",
+		"api": "https://api-terra2-jgeathg7x2mgvpcj-ie.internalendpoints.notional.ventures",
+		"hash": "",
+		"clients": [
+			"07-tendermint-226"
+		],
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"umee-1": {
 		"name": "Umee",
@@ -198,7 +239,8 @@
 		"clients": [
 			"07-tendermint-230"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	},
 	"migaloo-1": {
 		"name": "WhiteWhale",
@@ -206,8 +248,9 @@
 		"rpc": "https://rpc-whitewhale-h93nh9ykmqnzbrez-ie.internalendpoints.notional.ventures",
 		"hash": "B8F80E90B3019465DF94B8984A0A4B2D26BC43CA",
 		"clients": [
-			"07-tendermint-92", "07-tendermint-110"
+			"07-tendermint-92", "07-tendermint-110", "07-tendermint-108"
 		],
-		"block_time": 6
+		"block_time": 6,
+		"hermes": "1.5"
 	}
 }
