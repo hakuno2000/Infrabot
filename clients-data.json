@@ -88,7 +88,7 @@
 		"clients": [
 			"07-tendermint-207"
 		],
-		"block_time": 6
+		"block_time": 0.82
 	},
 	"juno-1": {
 		"name": "Juno",
