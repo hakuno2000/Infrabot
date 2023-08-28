@@ -84,8 +84,8 @@ def queryRpcGetHeigt(rpc):
         #     }
         #     requests.post(URL, data=json.dumps(payload))
         #     warned = True
-		traceback.print_exc()
-		print("Failed to get height from RPC")
+		# traceback.print_exc()
+		print(f"Failed to get height from RPC from {rpc}")
 		return ''
             
 def lastUpdateTime(last_block, current_block, block_time):
@@ -140,4 +140,4 @@ if __name__ == "__main__":
 	for chain in clients_data:
 		for client in clients_data[chain]["clients"]:
 			# if client == '': continue
-			checkClientState(chain, client, chain["hermes"])
+			checkClientState(chain, client, clients_data[chain]["hermes"])
