@@ -178,8 +178,8 @@
 	},
 	"secret-4": {
 		"name": "Secret Network",
-		"rpc": "https://rpc-secret.whispernode.com",
-		"api": "https://lcd-secret.whispernode.com",
+		"rpc": "https://rpc.secret.express:443",
+		"api": "",
 		"hash": "",
 		"clients": [
 			"07-tendermint-166"
