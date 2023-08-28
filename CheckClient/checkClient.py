@@ -54,7 +54,10 @@ def queryRpcGetHeigt(rpc):
 	try:
 		request = requests.get(f"{rpc}/block", headers=header)
 		response = request.json()
-		height = response["result"]["block"]["header"]["height"]
+		try:
+			height = response["result"]["block"]["header"]["height"]
+		except:
+			height = response["block"]["header"]["height"]
 		# print(height)
 		return height
 
@@ -101,7 +104,11 @@ def checkClientState(chain, client, hermes_version):
 	dest_chain_id, dest_chain_height = queryHermesGetClient(chain, client, hermes_version)
 	if dest_chain_id == '': return
 	dest_chain_height = int(dest_chain_height)
-	dest_chain = clients_data[dest_chain_id]
+	try:
+		dest_chain = clients_data[dest_chain_id]
+	except Exception as e:
+		print(f"Unknown chain {dest_chain_id} in clients-data.json")
+		return
 	# print(dest_chain)
 	dest_chain_current_height = queryRpcGetHeigt(dest_chain["rpc"])
 	if dest_chain_current_height == '': return
