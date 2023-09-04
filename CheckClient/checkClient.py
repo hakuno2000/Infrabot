@@ -120,7 +120,7 @@ def checkClientState(chain, client, hermes_version):
 	
 	last_hour, last_minute, last_second = lastUpdateTime(dest_chain_height, dest_chain_current_height, block_time)
 
-	print(f"{clients_data[chain]['name']} 's {client} client to {dest_chain['name']} last updated is {dest_chain_height}, current is {dest_chain_current_height}, updated {last_hour}h {last_minute}m {last_second}s ago")
+	print(f"{clients_data[chain]['name']}'s {client} client to {dest_chain['name']} last updated is {dest_chain_height}, current is {dest_chain_current_height}, updated {last_hour}h {last_minute}m {last_second}s ago")
 	# message(os.getenv("PI"), f"{clients_data[chain]['name']} client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
 	# if last_update > limit:
 	# 	if thread_id == "":
@@ -128,7 +128,7 @@ def checkClientState(chain, client, hermes_version):
 	# 	else: 
 	# 		message(os.getenv("PI"), f"Our {dest_chain_id} client is not updated", thread_id)
 	if last_update > limit:
-		message(os.getenv("PI"), f"{clients_data[chain]['name']} client to {dest_chain['name']} is not updated, last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
+		message(os.getenv("PI"), f"{clients_data[chain]['name']}'s {client} client to {dest_chain['name']} is not updated, last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
 
 if __name__ == "__main__":
 	# Reads chains-data file relative to the location of this file.
