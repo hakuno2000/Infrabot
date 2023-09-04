@@ -120,7 +120,7 @@ def checkClientState(chain, client, hermes_version):
 	
 	last_hour, last_minute, last_second = lastUpdateTime(dest_chain_height, dest_chain_current_height, block_time)
 
-	print(f"{clients_data[chain]['name']} client to {dest_chain['name']} last updated is {dest_chain_height}, current is {dest_chain_current_height}, updated {last_hour}h {last_minute}m {last_second}s ago")
+	print(f"{clients_data[chain]['name']} 's {client} client to {dest_chain['name']} last updated is {dest_chain_height}, current is {dest_chain_current_height}, updated {last_hour}h {last_minute}m {last_second}s ago")
 	# message(os.getenv("PI"), f"{clients_data[chain]['name']} client to {dest_chain['name']} last updated height is {dest_chain_height} and current height is {dest_chain_current_height}, last updated {last_hour}h {last_minute}m {last_second}s ago")
 	# if last_update > limit:
 	# 	if thread_id == "":
@@ -144,7 +144,12 @@ if __name__ == "__main__":
 	#     time.sleep(10)
 
 	# checkClientState('centauri-1', '07-tendermint-1')
+
+	print("Checked at ", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+	print("=============================================")
 	for chain in clients_data:
 		for client in clients_data[chain]["clients"]:
 			# if client == '': continue
 			checkClientState(chain, client, clients_data[chain]["hermes"])
+	print("=============================================")
+	print("\n")
