@@ -178,7 +178,7 @@
 	},
 	"secret-4": {
 		"name": "Secret Network",
-		"rpc": "https://rpc.secret.express:443",
+		"rpc": "https://secret-4.api.trivium.network:26657",
 		"api": "",
 		"hash": "",
 		"clients": [
