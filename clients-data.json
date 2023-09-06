@@ -252,5 +252,16 @@
 		],
 		"block_time": 6,
 		"hermes": "1.5"
+	},
+	"wormchain": {
+		"name": "Wormhole",
+		"api": "",
+		"rpc": "http://127.0.0.1:2001",
+		"hash": "",
+		"clients": [
+			"07-tendermint-4"
+		],
+		"block_time": 6,
+		"hermes": "1.5"
 	}
 }
