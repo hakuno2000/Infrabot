@@ -42,8 +42,8 @@ def queryHermesGetClient(chain, client, hermes_version):
 	# print(dest_chain_height)
 
 	# print(dest_chain_id, dest_chain_height)
-	if dest_chain_id == '': message(os.getenv("PI"), f"{message}")
-	return dest_chain_id, dest_chain_height
+	if dest_chain_id == '': print(message)
+	return dest_chain_id, dest_chain_height, message
 
 def queryRpcGetHeigt(rpc):
 	global miss_counter, thread_id, warned
@@ -101,8 +101,10 @@ def lastUpdateTime(last_block, current_block, block_time):
 	return hour, minute, second
 
 def checkClientState(chain, client, hermes_version):
-	dest_chain_id, dest_chain_height = queryHermesGetClient(chain, client, hermes_version)
-	if dest_chain_id == '': return
+	dest_chain_id, dest_chain_height, message = queryHermesGetClient(chain, client, hermes_version)
+	if dest_chain_id == '':
+		message(os.getenv("PI"), f"{message}")
+		return
 	dest_chain_height = int(dest_chain_height)
 	try:
 		dest_chain = clients_data[dest_chain_id]
