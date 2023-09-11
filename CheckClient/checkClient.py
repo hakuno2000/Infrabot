@@ -103,7 +103,7 @@ def lastUpdateTime(last_block, current_block, block_time):
 def checkClientState(chain, client, hermes_version):
 	dest_chain_id, dest_chain_height, hermes_message = queryHermesGetClient(chain, client, hermes_version)
 	if dest_chain_id == '':
-		message(os.getenv("PI"), hermes_message)
+		message(os.getenv("PI"), "Hermes query failed: " + hermes_message)
 		return
 	dest_chain_height = int(dest_chain_height)
 	try:
@@ -114,7 +114,7 @@ def checkClientState(chain, client, hermes_version):
 	# print(dest_chain)
 	dest_chain_current_height = queryRpcGetHeigt(dest_chain["rpc"])
 	if dest_chain_current_height == '':
-		message(os.getenv("PI"), f"Failed to get height from RPC from {dest_chain['rpc']} for checking {clients_data[chain]['name']}'s {client} client")
+		#message(os.getenv("PI"), f"Failed to get height from RPC from {dest_chain['rpc']} for checking {clients_data[chain]['name']}'s {client} client")
 		return
 	dest_chain_current_height = int(dest_chain_current_height)
 
