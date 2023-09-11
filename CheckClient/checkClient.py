@@ -103,7 +103,7 @@ def lastUpdateTime(last_block, current_block, block_time):
 def checkClientState(chain, client, hermes_version):
 	dest_chain_id, dest_chain_height, message = queryHermesGetClient(chain, client, hermes_version)
 	if dest_chain_id == '':
-		message(os.getenv("PI"), f"{message}")
+		message(os.getenv("PI"), message)
 		return
 	dest_chain_height = int(dest_chain_height)
 	try:
