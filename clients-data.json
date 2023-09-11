@@ -23,8 +23,8 @@
 	},
 	"canto_7700-1": {
 		"name": "Canto",
-		"api": "https://api.canto.nodestake.top",
-		"rpc": "https://rpc.canto.nodestake.top",
+		"api": "https://canto-rpc.polkachu.com",
+		"rpc": "https://canto-rpc.polkachu.com",
 		"hash": "FB22C9B125AD355328640BD56F93EED51AA65F74",
 		"clients": [
 			"07-tendermint-38"
