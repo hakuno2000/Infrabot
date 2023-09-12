@@ -23,7 +23,7 @@ from app import message
 load_dotenv()
 
 upgrade_list = {}
-
+final_msg = ""
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 def calendarAddEvent(chainName, timeToUpgrade):
@@ -138,6 +138,11 @@ def getUpdate():
                 "upgrade_time": chain["estimated_upgrade_time"],
             }
             
+        if not upgrade_list:
+            return
+        else:
+            final_msg += "Upcoming upgrade in 24 hours:\n"
+
         # print(upgrade_list)
         # for chain in upgrade_list:
         #     urlString = chain["rpc"] + "/block"
@@ -186,7 +191,11 @@ def getUpdate():
                 upgrade_time = upgrade_time.astimezone(ZoneInfo("Asia/Ho_Chi_Minh"))
                 str_upgrade_date = str(upgrade_time.day) + "/" + str(upgrade_time.month)
                 str_upgrade_time = str(upgrade_time.hour) + ":" + str(upgrade_time.minute)
-                print(f"{upgrade_list[chain]['name']} needs to upgrade on {str_upgrade_date} at {str_upgrade_time}")
+
+                current_time = dt.fromisoformat(str(datetime.now())).replace(tzinfo=None)
+                time_diff = upgrade_time.replace(tzinfo=None) - current_time
+                if (time_diff.days == 0 and time_diff.seconds < 86400):
+                    final_msg += f"{upgrade_list[chain]['name']} needs to upgrade on {str_upgrade_date} at {str_upgrade_time}\n"
 
                 # res = message(os.getenv("PI"), f"UPGRADE: *{chain}* at around *{upgrade_time}*")
                 # thread_id = res.get("ts")
@@ -198,9 +207,11 @@ def getUpdate():
                 continue
 
     except Exception as e:
-        print(f"Issue with request to upgrade watcher api: {e}")
+        final_msg = f"Issue with request to upgrade watcher api: {e}"
         traceback.print_exc()
     
+    # message(os.getenv("PI"), final_msg)
+    print(final_msg)
     return upgrade_list
 
 if __name__ == "__main__":
