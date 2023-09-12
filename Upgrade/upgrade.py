@@ -11,6 +11,7 @@ import time
 import datetime
 import requests
 import traceback
+from datetime import datetime as dt
 from zoneinfo import ZoneInfo
 from dotenv import load_dotenv
 from os.path import dirname as parent_dir_name
@@ -180,11 +181,11 @@ def getUpdate():
             try:
                 upgrade_time = upgrade_list[chain]["upgrade_time"]
                 # to datetime UTC
-                upgrade_time = datetime.fromisoformat(upgrade_time.replace('Z', '+00:00'))
+                upgrade_time = dt.fromisoformat(upgrade_time.replace('Z', '+00:00'))
                 # to Vietnam timezone then remove timezone info
                 upgrade_time = upgrade_time.astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).replace(tzinfo=None)
                 # parse from iso formate datetime
-                upgrade_time = datetime.fromisoformat(upgrade_time.isoformat())
+                upgrade_time = dt.fromisoformat(upgrade_time.isoformat())
                 print(f"{chain['name']} needs to upgrade at {upgrade_time}")
 
                 # res = message(os.getenv("PI"), f"UPGRADE: *{chain}* at around *{upgrade_time}*")
