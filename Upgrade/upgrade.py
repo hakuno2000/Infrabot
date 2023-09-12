@@ -192,7 +192,7 @@ def getUpdate():
                 str_upgrade_date = str(upgrade_time.day) + "/" + str(upgrade_time.month)
                 str_upgrade_time = str(upgrade_time.hour) + ":" + str(upgrade_time.minute)
 
-                current_time = dt.fromisoformat(str(datetime.now())).replace(tzinfo=None)
+                current_time = dt.fromisoformat(str(dt.now())).replace(tzinfo=None)
                 time_diff = upgrade_time.replace(tzinfo=None) - current_time
                 if (time_diff.days == 0 and time_diff.seconds < 86400):
                     final_msg += f"{upgrade_list[chain]['name']} needs to upgrade on {str_upgrade_date} at {str_upgrade_time}\n"
