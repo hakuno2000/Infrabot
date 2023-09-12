@@ -149,6 +149,7 @@ if __name__ == "__main__":
 
 	# checkClientState('centauri-1', '07-tendermint-1')
 
+	print("=============================================")
 	print("Checked at ", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 	print("=============================================")
 	for chain in clients_data:
@@ -156,4 +157,3 @@ if __name__ == "__main__":
 			# if client == '': continue
 			checkClientState(chain, client, clients_data[chain]["hermes"])
 	print("=============================================")
-	print("\n")
