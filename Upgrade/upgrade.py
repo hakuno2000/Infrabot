@@ -11,6 +11,7 @@ import time
 import datetime
 import requests
 import traceback
+from zoneinfo import ZoneInfo
 from dotenv import load_dotenv
 from os.path import dirname as parent_dir_name
 
@@ -20,7 +21,7 @@ from app import message
 
 load_dotenv()
 
-upgradeList = {}
+upgrade_list = {}
 
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
@@ -116,7 +117,7 @@ def calendarAddEvent(chainName, timeToUpgrade):
 def getUpdate():
     try:
         data = requests.get(
-            "https://backend.notional.ventures/upgrade",
+            "https://polkachu.com/api/v1/chain_upgrades",
             headers={
                 'accept': 'application/json',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'
@@ -125,58 +126,85 @@ def getUpdate():
 
         data = data.json()
         for chain in data:
-            upgradeList[chain["name"]] = {
-                "id": int(chain["id"]),
-                "key": chain["key"],
-                "height":  int(chain["height"]),
-                "version": chain["version"]
+            upgrade_list[chain["name"]] = {
+                "id": int(chain["network"]),
+                "name": chain["chain_name"],
+                "upgrade_height":  int(chain["block"]),
+                "version": chain["node_version"],
+                "repo": chain["repo"],
+                "rpc": chain["rpc"],
+                "api": chain["api"],
+                "upgrade_time": chain["estimated_upgrade_time"],
             }
             
-        # print(upgradeList)
-        for chain in upgradeList:
-            urlString = f"https://backend.notional.ventures/{upgradeList[chain]['key']}/information"
+        print(upgrade_list)
+        # for chain in upgrade_list:
+        #     urlString = chain["rpc"] + "/block"
+        #     try:
+        #         response = requests.get(
+        #             urlString,
+        #             headers={
+        #                 'accept': 'application/json',
+        #                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'
+        #             }
+        #         ).json()
+
+        #         try:
+        #             current_height = response["result"]["block"]["header"]["height"]
+        #         except:
+        #             current_height = response["block"]["header"]["height"]
+
+        #         upgrade_height = chain["upgrade_height"]
+
+        #         currentHeight = int(response["height"])
+        #         blockTime = float(response["blockTime"])
+        #         upgradeHeight = upgrade_list[chain]["height"]
+
+        #         timeToUpgrade = (upgradeHeight - currentHeight) * blockTime
+        #         print(chain, upgradeHeight, timeToUpgrade )
+        #         if timeToUpgrade < 86400:
+        #             print(f"{chain} need to upgrade")
+        #             str_time = (datetime.datetime.now().astimezone() + datetime.timedelta(seconds=timeToUpgrade) + datetime.timedelta(hours=7)).astimezone()
+        #             time = str_time.strftime("%H:%M %d/%m/%Y")
+        #             res = message(os.getenv("PI"), f"UPGRADE: *{chain}* at around *{time}*")
+        #             thread_id = res.get("ts")
+        #             message(os.getenv("PI"), f"Name: *{chain}*\nProposal ID: *{upgrade_list[chain]['id']}*\nBlock: *{upgradeList[chain]['height']}*\nVersion: *{upgradeList[chain]['version']}*\n", thread_id)
+
+        #     except Exception as e:
+        #         print(f"Error getting data from {urlString}: {e}")
+        #         traceback.print_exc()
+        #         continue
+        #     # print(urlString)
+
+        for chain in upgrade_list:
             try:
-                resData = requests.get(
-                    urlString,
-                    headers={
-                        'accept': 'application/json',
-                        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'
-                    }
-                ).json()
+                upgrade_time = upgrade_list[chain]["upgrade_time"]
+                # to datetime UTC
+                upgrade_time = datetime.fromisoformat(upgrade_time.replace('Z', '+00:00'))
+                # to Vietnam timezone then remove timezone info
+                upgrade_time = upgrade_time.astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).replace(tzinfo=None)
+                # parse from iso formate datetime
+                upgrade_time = datetime.fromisoformat(upgrade_time.isoformat())
+                print(f"{chain['name']} needs to upgrade at {upgrade_time}")
 
-                currentHeight = int(resData["height"])
-                blockTime = float(resData["blockTime"])
-                upgradeHeight = upgradeList[chain]["height"]
-
-                timeToUpgrade = (upgradeHeight - currentHeight) * blockTime
-                print(chain, upgradeHeight, timeToUpgrade )
-                if timeToUpgrade < 86400:
-                    print(f"{chain} need to upgrade")
-                    str_time = (datetime.datetime.now().astimezone() + datetime.timedelta(seconds=timeToUpgrade) + datetime.timedelta(hours=7)).astimezone()
-                    time = str_time.strftime("%H:%M %d/%m/%Y")
-                    res = message(os.getenv("PI"), f"UPGRADE: *{chain}* at around *{time}*")
-                    thread_id = res.get("ts")
-                    message(os.getenv("PI"), f"Name: *{chain}*\nProposal ID: *{upgradeList[chain]['id']}*\nBlock: *{upgradeList[chain]['height']}*\nVersion: *{upgradeList[chain]['version']}*\n", thread_id)
-
+                # res = message(os.getenv("PI"), f"UPGRADE: *{chain}* at around *{upgrade_time}*")
+                # thread_id = res.get("ts")
+                # message(os.getenv("PI"), f"Name: *{chain}*\nProposal ID: *{upgrade_list[chain]['id']}*\nBlock: *{upgrade_list[chain]['upgrade_height']}*\nVersion: *{upgrade_list[chain]['version']}*\n", thread_id)
+                # calendarAddEvent(chain, upgrade_time)
             except Exception as e:
-                print(f"Error getting data from {urlString}: {e}")
+                print(f"Error getting data")
                 traceback.print_exc()
                 continue
-            # print(urlString)
 
     except Exception as e:
-        print(f"Issue with request to rpc: {e}")
+        print(f"Issue with request to upgrade watcher api: {e}")
         traceback.print_exc()
     
-    return upgradeList
+    return upgrade_list
 
 if __name__ == "__main__":    
-    root_dir = parent_dir_name(parent_dir_name(os.path.realpath(__file__)))
-    chains_data = os.path.join(root_dir, 'chains-data.json')
-    chains_data = json.load(open(chains_data))
+    # root_dir = parent_dir_name(parent_dir_name(os.path.realpath(__file__)))
+    # chains_data = os.path.join(root_dir, 'chains-data.json')
+    # chains_data = json.load(open(chains_data))
 
-    # while True:
-    #     getUpdate()
-    #     print("Sleeping for 12 hours")
-    #     time.sleep(43200)
     getUpdate()
