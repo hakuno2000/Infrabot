@@ -23,7 +23,6 @@ from app import message
 load_dotenv()
 
 upgrade_list = {}
-final_msg = ""
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 def calendarAddEvent(chainName, timeToUpgrade):
@@ -116,6 +115,7 @@ def calendarAddEvent(chainName, timeToUpgrade):
         return None
 
 def getUpdate():
+    final_msg = ""
     try:
         data = requests.get(
             "https://polkachu.com/api/v1/chain_upgrades",
