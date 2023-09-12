@@ -137,11 +137,6 @@ def getUpdate():
                 "api": chain["api"],
                 "upgrade_time": chain["estimated_upgrade_time"],
             }
-            
-        if not upgrade_list:
-            return
-        else:
-            final_msg += "Upcoming upgrade in 24 hours:\n"
 
         # print(upgrade_list)
         # for chain in upgrade_list:
@@ -195,7 +190,10 @@ def getUpdate():
                 current_time = dt.fromisoformat(str(dt.now())).replace(tzinfo=None)
                 time_diff = upgrade_time.replace(tzinfo=None) - current_time
                 if (time_diff.days == 0 and time_diff.seconds < 86400):
-                    final_msg += f"{upgrade_list[chain]['name']} needs to upgrade on {str_upgrade_date} at {str_upgrade_time}\n"
+                    if (final_msg == ""):
+                        final_msg += "Upcoming upgrade in 24 hours:"
+                    final_msg += "\n"
+                    final_msg += f"{upgrade_list[chain]['name']} needs to upgrade in about {time_diff.seconds // 3600} hour(s), on {str_upgrade_date} at {str_upgrade_time}"
 
                 # res = message(os.getenv("PI"), f"UPGRADE: *{chain}* at around *{upgrade_time}*")
                 # thread_id = res.get("ts")
