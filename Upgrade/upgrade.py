@@ -193,7 +193,7 @@ def getUpdate():
                     if (final_msg == ""):
                         final_msg += "Upcoming upgrade in 24 hours:"
                     final_msg += "\n"
-                    final_msg += f"{upgrade_list[chain]['name']} needs to upgrade in about {time_diff.seconds // 3600} hour(s), on {str_upgrade_date} at {str_upgrade_time}"
+                    final_msg += f"- {upgrade_list[chain]['name']} needs to upgrade in about {time_diff.seconds // 3600} hour(s), on {str_upgrade_date} at {str_upgrade_time}"
 
                 # res = message(os.getenv("PI"), f"UPGRADE: *{chain}* at around *{upgrade_time}*")
                 # thread_id = res.get("ts")
@@ -208,8 +208,8 @@ def getUpdate():
         final_msg = f"Issue with request to upgrade watcher api: {e}"
         traceback.print_exc()
     
-    # message(os.getenv("PI"), final_msg)
-    print(final_msg)
+    message(os.getenv("PI"), final_msg)
+    # print(final_msg)
     return upgrade_list
 
 if __name__ == "__main__":
