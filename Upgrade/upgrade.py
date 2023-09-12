@@ -127,7 +127,7 @@ def getUpdate():
         data = data.json()
         for chain in data:
             upgrade_list[chain["name"]] = {
-                "id": int(chain["network"]),
+                "id": chain["network"],
                 "name": chain["chain_name"],
                 "upgrade_height":  int(chain["block"]),
                 "version": chain["node_version"],
