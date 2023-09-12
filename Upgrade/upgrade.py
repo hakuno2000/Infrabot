@@ -138,7 +138,7 @@ def getUpdate():
                 "upgrade_time": chain["estimated_upgrade_time"],
             }
             
-        print(upgrade_list)
+        # print(upgrade_list)
         # for chain in upgrade_list:
         #     urlString = chain["rpc"] + "/block"
         #     try:
@@ -182,11 +182,11 @@ def getUpdate():
                 upgrade_time = upgrade_list[chain]["upgrade_time"]
                 # to datetime UTC
                 upgrade_time = dt.fromisoformat(upgrade_time.replace('Z', '+00:00'))
-                # to Vietnam timezone then remove timezone info
-                upgrade_time = upgrade_time.astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).replace(tzinfo=None)
-                # parse from iso formate datetime
-                upgrade_time = dt.fromisoformat(upgrade_time.isoformat())
-                print(f"{chain['name']} needs to upgrade at {upgrade_time}")
+                # to Vietnam timezone
+                upgrade_time = upgrade_time.astimezone(ZoneInfo("Asia/Ho_Chi_Minh"))
+                str_upgrade_date = str(upgrade_time.day) + "/" + str(upgrade_time.month)
+                str_upgrade_time = str(upgrade_time.hour) + ":" + str(upgrade_time.minute)
+                print(f"{upgrade_list[chain]['name']} needs to upgrade on {str_upgrade_date} at {str_upgrade_time}")
 
                 # res = message(os.getenv("PI"), f"UPGRADE: *{chain}* at around *{upgrade_time}*")
                 # thread_id = res.get("ts")
@@ -203,7 +203,7 @@ def getUpdate():
     
     return upgrade_list
 
-if __name__ == "__main__":    
+if __name__ == "__main__":
     # root_dir = parent_dir_name(parent_dir_name(os.path.realpath(__file__)))
     # chains_data = os.path.join(root_dir, 'chains-data.json')
     # chains_data = json.load(open(chains_data))
