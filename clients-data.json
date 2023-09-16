@@ -1,8 +1,8 @@
 {
 	"agoric-3": {
 		"name": "Agoric",
-		"api": "https://agoric-api.polkachu.com",
 		"rpc": "https://rpc-agoric-cur5tldlsvrynt9a-ie.internalendpoints.notional.ventures",
+		"api": "https://agoric-api.polkachu.com",
 		"hash": "1884F4010BE1FE31B454A434FD7EC5933C39757E",
 		"clients": [
 			"07-tendermint-70"
@@ -10,10 +10,21 @@
 		"block_time": 6,
 		"hermes": "1.5"
 	},
+	"akashnet-2": {
+		"name": "Akash",
+		"rpc": "https://rpc-akash-rcp7k2bselyphstl-ie.internalendpoints.notional.ventures",
+		"api": "https://api-akash-ubxrzmnbbkmxahwx-ie.internalendpoints.notional.ventures",
+		"hash": "",
+		"clients": [
+			"07-tendermint-169"
+		],
+		"block_time": 6,
+		"hermes": "1.5"
+	},
 	"axelar-dojo-1": {
 		"name": "Axelar",
-		"api": "https://api-axelar-tyf23vj3gvwffegd-ie.internalendpoints.notional.ventures",
 		"rpc": "https://rpc-axelar-hxvqgbuustprtf6g-ie.internalendpoints.notional.ventures",
+		"api": "https://api-axelar-tyf23vj3gvwffegd-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
 			"07-tendermint-151"
@@ -23,8 +34,8 @@
 	},
 	"canto_7700-1": {
 		"name": "Canto",
-		"api": "https://canto-rpc.polkachu.com",
 		"rpc": "https://canto-rpc.polkachu.com",
+		"api": "https://canto-rpc.polkachu.com",
 		"hash": "FB22C9B125AD355328640BD56F93EED51AA65F74",
 		"clients": [
 			"07-tendermint-38"
@@ -50,7 +61,7 @@
 		"hash": "59DCE7600A51390727E8BBD5B013DB03A63A00FA",
 		"clients": [
 			"07-tendermint-1", "07-tendermint-6", "07-tendermint-7", "07-tendermint-14", "07-tendermint-25", "07-tendermint-26", "07-tendermint-30", "07-tendermint-31", "07-tendermint-46", "07-tendermint-50", "07-tendermint-51", "07-tendermint-52", "07-tendermint-66", "07-tendermint-67", "07-tendermint-68",
-			"07-tendermint-110", "07-tendermint-125", "07-tendermint-126", "07-tendermint-127", "07-tendermint-123"
+			"07-tendermint-110", "07-tendermint-125", "07-tendermint-126", "07-tendermint-127", "07-tendermint-123", "07-tendermint-128", "07-tendermint-129"
 		],
 		"block_time": 6,
 		"hermes": "1.5"
@@ -132,6 +143,17 @@
 		"block_time": 6,
 		"hermes": "1.5"
 	},
+	"noble-1": {
+		"name": "Noble",
+		"rpc": "https://rpc-noble-guayymeghanekp8p-ie.internalendpoints.notional.ventures",
+		"api": "https://api-noble-j2pchstrwubdkgxu-ie.internalendpoints.notional.ventures",
+		"hash": "",
+		"clients": [
+			"07-tendermint-19", "07-tendermint-18"
+		],
+		"block_time": 6,
+		"hermes": "1.5"
+	},
 	"osmosis-1": {
 		"name": "Osmosis",
 		"rpc": "https://rpc-osmosis-k5paa8zasfwqehxa-ie.internalendpoints.notional.ventures",
@@ -156,8 +178,8 @@
 	},
 	"quicksilver-2": {
 		"name": "Quicksilver",
-		"api": "https://api-quicksilver-r3u9yenyzbka3ldg-ie.internalendpoints.notional.ventures",
 		"rpc": "https://rpc-quicksilver-dtdv8lf9yywnma2y-ie.internalendpoints.notional.ventures",
+		"api": "https://api-quicksilver-r3u9yenyzbka3ldg-ie.internalendpoints.notional.ventures",
 		"hash": "14B1A9BF60AC2A39199FCEDA7FFBE95500653601",
 		"clients": [
 			"07-tendermint-78"
@@ -167,8 +189,8 @@
 	},
 	"regen-1": {
 		"name": "Regen",
-		"api": "https://api-kujira-pcd5tmmkl4xfjgjd-ie.internalendpoints.notional.ventures",
 		"rpc": "https://rpc-kujira-vypnyvrxbc8sdzyk-ie.internalendpoints.notional.ventures",
+		"api": "https://api-kujira-pcd5tmmkl4xfjgjd-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
 			"07-tendermint-174"
@@ -233,8 +255,8 @@
 	},
 	"umee-1": {
 		"name": "Umee",
-		"api": "https://api-umee-jvyurdwrjstysm76-ie.internalendpoints.notional.ventures",
 		"rpc": "https://rpc-umee-krsca29fr7y8jdb9-ie.internalendpoints.notional.ventures",
+		"api": "https://api-umee-jvyurdwrjstysm76-ie.internalendpoints.notional.ventures",
 		"hash": "2CB064741F8D8EE2C001EBADD557872266F5698C",
 		"clients": [
 			"07-tendermint-230"
@@ -244,19 +266,19 @@
 	},
 	"migaloo-1": {
 		"name": "WhiteWhale",
-		"api": "https://api-whitewhale-hdp4lpezc2jpmdtv-ie.internalendpoints.notional.ventures",
 		"rpc": "https://rpc-whitewhale-h93nh9ykmqnzbrez-ie.internalendpoints.notional.ventures",
+		"api": "https://api-whitewhale-hdp4lpezc2jpmdtv-ie.internalendpoints.notional.ventures",
 		"hash": "B8F80E90B3019465DF94B8984A0A4B2D26BC43CA",
 		"clients": [
-			"07-tendermint-92", "07-tendermint-110", "07-tendermint-108"
+			"07-tendermint-92", "07-tendermint-110", "07-tendermint-108", "07-tendermint-113"
 		],
 		"block_time": 6,
 		"hermes": "1.5"
 	},
 	"wormchain": {
 		"name": "Wormhole",
-		"api": "",
 		"rpc": "http://127.0.0.1:2001",
+		"api": "",
 		"hash": "",
 		"clients": [
 			"07-tendermint-4"
