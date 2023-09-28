@@ -187,7 +187,7 @@ def getUpdate():
                 str_upgrade_date = str(upgrade_time.day) + "/" + str(upgrade_time.month)
                 str_upgrade_time = str(upgrade_time.hour) + ":" + str(upgrade_time.minute)
 
-                current_time = dt.fromisoformat(str(dt.now())).replace(tzinfo=None)
+                current_time = dt.fromisoformat(str(dt.now())).astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).replace(tzinfo=None)
                 time_diff = upgrade_time.replace(tzinfo=None) - current_time
                 if (time_diff.days == 0 and time_diff.seconds < 86400):
                     if (final_msg == ""):
