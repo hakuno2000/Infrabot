@@ -118,7 +118,7 @@ def getUpdate():
     final_msg = ""
     try:
         data = requests.get(
-            "https://polkachu.com/api/v1/chain_upgrades",
+            "https://polkachu.com/api/v2/chain_upgrades",
             headers={
                 'accept': 'application/json',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'
