@@ -199,8 +199,8 @@
 	},
 	"regen-1": {
 		"name": "Regen",
-		"rpc": "https://rpc-kujira-vypnyvrxbc8sdzyk-ie.internalendpoints.notional.ventures",
-		"api": "https://api-kujira-pcd5tmmkl4xfjgjd-ie.internalendpoints.notional.ventures",
+		"rpc": "https://rpc-regen-ia.cosmosia.notional.ventures",
+		"api": "",
 		"hash": "",
 		"clients": [
 			"07-tendermint-174"
