@@ -287,7 +287,7 @@
 	},
 	"wormchain": {
 		"name": "Wormhole",
-		"rpc": "http://127.0.0.1:2001",
+		"rpc": "https://wormchain-rpc.quickapi.com",
 		"api": "",
 		"hash": "",
 		"clients": [
