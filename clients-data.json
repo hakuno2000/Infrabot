@@ -88,6 +88,16 @@
 		"block_time": 6,
 		"hermes": "1.5"
 	},
+	"crypto-org-chain-mainnet-1": {
+		"name": "Cronos POS Chain",
+		"rpc": "https://rpc-cryptoorgchain-mwmdq3bhexldsawa-ie.internalendpoints.notional.ventures",
+		"api": "https://api-cryptoorgchain-hmfxkglf5snjepax-ie.internalendpoints.notional.ventures",
+		"hash": "",
+		"clients": [
+		],
+		"block_time": 6,
+		"hermes": "1.5"
+	},
 	"evmos_9001-2": {
 		"name": "Evmos",
 		"rpc": "https://rpc-evmos-ushmmehmvxl4lpsk-ie.internalendpoints.notional.ventures",
