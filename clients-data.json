@@ -1,8 +1,8 @@
 {
 	"agoric-3": {
 		"name": "Agoric",
-		"rpc": "https://rpc-agoric-ia.cosmosia.notional.ventures",
-		"api": "https://api-agoric-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-agoric-cur5tldlsvrynt9a-ie.internalendpoints.notional.ventures",
+		"api": "https://agoric-api.polkachu.com",
 		"hash": "1884F4010BE1FE31B454A434FD7EC5933C39757E",
 		"clients": [
 			"07-tendermint-70"
@@ -12,8 +12,8 @@
 	},
 	"akashnet-2": {
 		"name": "Akash",
-		"rpc": "https://rpc-akash-ia.cosmosia.notional.ventures",
-		"api": "https://api-akash-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-akash-rcp7k2bselyphstl-ie.internalendpoints.notional.ventures",
+		"api": "https://api-akash-ubxrzmnbbkmxahwx-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
 			"07-tendermint-169"
@@ -23,8 +23,8 @@
 	},
 	"axelar-dojo-1": {
 		"name": "Axelar",
-		"rpc": "https://rpc-axelar-ia.cosmosia.notional.ventures",
-		"api": "https://api-axelar-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-axelar-hxvqgbuustprtf6g-ie.internalendpoints.notional.ventures",
+		"api": "https://api-axelar-tyf23vj3gvwffegd-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
 			"07-tendermint-151"
@@ -45,8 +45,8 @@
 	},
 	"chihuahua-1": {
 		"name": "Chihuahua",
-		"rpc": "https://rpc-chihuahua-ia.cosmosia.notional.ventures",
-		"api": "https://api-chihuahua-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-chihuahua-ywzkuvmqsjvzvytm-ie.internalendpoints.notional.ventures",
+		"api": "https://api-chihuahua-yc3bk2ferjc93t7n-ie.internalendpoints.notional.ventures",
 		"hash": "C13AC76E729A4408F13A935220B1D5A674AD55CD",
 		"clients": [
 			"07-tendermint-175"
@@ -56,8 +56,8 @@
 	},
 	"centauri-1": {
 		"name": "Composable",
-		"rpc": "https://rpc-composable-ia.cosmosia.notional.ventures",
-		"api": "https://api-composable-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-composable-pzavbtl2jmxk8wyc-ie.internalendpoints.notional.ventures",
+		"api": "https://api-composable-vpfsw5efpplj3au5-ie.internalendpoints.notional.ventures",
 		"hash": "59DCE7600A51390727E8BBD5B013DB03A63A00FA",
 		"clients": [
 			"07-tendermint-1", "07-tendermint-6", "07-tendermint-7", "07-tendermint-14", "07-tendermint-25", "07-tendermint-26", "07-tendermint-30", "07-tendermint-31", "07-tendermint-46", "07-tendermint-50", "07-tendermint-51", "07-tendermint-52", "07-tendermint-66", "07-tendermint-67", "07-tendermint-68",
@@ -68,8 +68,8 @@
 	},
 	"cosmoshub-4": {
 		"name": "Gaia",
-		"rpc": "https://rpc-cosmoshub-ia.cosmosia.notional.ventures",
-		"api": "https://api-cosmoshub-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-cosmoshub-j2nfbupdbmvlxv2k-ie.internalendpoints.notional.ventures",
+		"api": "https://api-cosmoshub-5kpukvxbxhzmtkyg-ie.internalendpoints.notional.ventures",
 		"hash": "1BB296700D6FCF2318AADA2D098E4D40479B6C7E",
 		"clients": [
 			"07-tendermint-1150", "07-tendermint-1140"
@@ -90,8 +90,8 @@
 	},
 	"crypto-org-chain-mainnet-1": {
 		"name": "Cronos POS Chain",
-		"rpc": "https://rpc-cryptoorgchain-ia.cosmosia.notional.ventures",
-		"api": "https://api-cryptoorgchain-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-cryptoorgchain-mwmdq3bhexldsawa-ie.internalendpoints.notional.ventures",
+		"api": "https://api-cryptoorgchain-hmfxkglf5snjepax-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
 		],
@@ -100,8 +100,8 @@
 	},
 	"evmos_9001-2": {
 		"name": "Evmos",
-		"rpc": "https://rpc-evmos-ia.cosmosia.notional.ventures",
-		"api": "https://api-evmos-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-evmos-ushmmehmvxl4lpsk-ie.internalendpoints.notional.ventures",
+		"api": "https://api-evmos-ffvc89aaqux65vz9-ie.internalendpoints.notional.ventures",
 		"hash": "FBC7E15255A18264C3AF14712F3C6A444B2412AF",
 		"clients": [
 			"07-tendermint-111"
@@ -111,8 +111,8 @@
 	},
 	"injective-1": {
 		"name": "Injective",
-		"rpc": "https://rpc-evmos-ia.cosmosia.notional.ventures",
-		"api": "https://api-evmos-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-injective-v7dtuhp57urhpzee-ie.internalendpoints.notional.ventures",
+		"api": "https://api-injective-dpyy8unbmsjcdpqw-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
 			"07-tendermint-207"
@@ -122,8 +122,8 @@
 	},
 	"juno-1": {
 		"name": "Juno",
-		"rpc": "https://rpc-juno-ia.cosmosia.notional.ventures",
-		"api": "https://api-juno-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-juno-babcbncrvr7wc2bq-ie.internalendpoints.notional.ventures",
+		"api": "https://api-juno-pe3w8buwzkdrksbs-ie.internalendpoints.notional.ventures",
 		"hash": "6EC804DBB72380D0AA5AC6A82650A1FA75FBABC5",
 		"clients": [
 			"07-tendermint-382"
@@ -133,22 +133,11 @@
 	},
 	"kaiyo-1": {
 		"name": "Kujira",
-		"rpc": "https://rpc-kujira-ia.cosmosia.notional.ventures",
-		"api": "https://api-kujira-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-kujira-vypnyvrxbc8sdzyk-ie.internalendpoints.notional.ventures",
+		"api": "https://api-kujira-pcd5tmmkl4xfjgjd-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
 			"07-tendermint-147"
-		],
-		"block_time": 6,
-		"hermes": "1.5"
-	},
-	"migaloo-1": {
-		"name": "Migaloo",
-		"rpc": "https://migaloo-rpc.polkachu.com",
-		"api": "https://migaloo-api.polkachu.com",
-		"hash": "B8F80E90B3019465DF94B8984A0A4B2D26BC43CA",
-		"clients": [
-			"07-tendermint-92", "07-tendermint-110", "07-tendermint-108", "07-tendermint-113"
 		],
 		"block_time": 6,
 		"hermes": "1.5"
@@ -166,8 +155,8 @@
 	},
 	"noble-1": {
 		"name": "Noble",
-		"rpc": "https://noble-rpc.polkachu.com",
-		"api": "https://noble-api.polkachu.com",
+		"rpc": "https://rpc-noble-guayymeghanekp8p-ie.internalendpoints.notional.ventures",
+		"api": "https://api-noble-j2pchstrwubdkgxu-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
 			"07-tendermint-19", "07-tendermint-18"
@@ -177,8 +166,8 @@
 	},
 	"osmosis-1": {
 		"name": "Osmosis",
-		"rpc": "https://rpc-osmosis-ia.cosmosia.notional.ventures",
-		"api": "https://api-osmosis-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-osmosis-k5paa8zasfwqehxa-ie.internalendpoints.notional.ventures",
+		"api": "https://api-osmosis-rq7xwhzkwvv4ygtz-ie.internalendpoints.notional.ventures",
 		"hash": "D9EC9739CCCF051A05861ACB8A2218A9A4756390",
 		"clients": [
 			"07-tendermint-2846", "07-tendermint-2790"
@@ -188,8 +177,8 @@
 	},
 	"core-1": {
 		"name": "Persistence",
-		"rpc": "https://rpc-persistent-ia.cosmosia.notional.ventures",
-		"api": "https://api-persistent-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-persistent-ngwspf3eamyjzfqz-ie.internalendpoints.notional.ventures",
+		"api": "https://api-persistent-tbhdvxdsr5awb4gn-ie.internalendpoints.notional.ventures",
 		"hash": "D9EC9739CCCF051A05861ACB8A2218A9A4756390",
 		"clients": [
 			"07-tendermint-151"
@@ -199,8 +188,8 @@
 	},
 	"quicksilver-2": {
 		"name": "Quicksilver",
-		"rpc": "https://rpc-quicksilver-ia.cosmosia.notional.ventures",
-		"api": "https://api-quicksilver-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-quicksilver-dtdv8lf9yywnma2y-ie.internalendpoints.notional.ventures",
+		"api": "https://api-quicksilver-r3u9yenyzbka3ldg-ie.internalendpoints.notional.ventures",
 		"hash": "14B1A9BF60AC2A39199FCEDA7FFBE95500653601",
 		"clients": [
 			"07-tendermint-78"
@@ -211,7 +200,7 @@
 	"regen-1": {
 		"name": "Regen",
 		"rpc": "https://rpc-regen-ia.cosmosia.notional.ventures",
-		"api": "https://api-regen-ia.cosmosia.notional.ventures",
+		"api": "",
 		"hash": "",
 		"clients": [
 			"07-tendermint-174"
@@ -232,8 +221,8 @@
 	},
 	"pacific-1": {
 		"name": "Sei",
-		"rpc": "https://sei-rpc.polkachu.com",
-		"api": "https://sei-api.polkachu.com",
+		"rpc": "https://rpc-sei-2ddf5gw4kqzcuymz-ie.internalendpoints.notional.ventures",
+		"api": "https://api-sei-k4gxhmmp48umfeht-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
 			"07-tendermint-2", "07-tendermint-3", "07-tendermint-8", "07-tendermint-10", "07-tendermint-12", "07-tendermint-22"
@@ -243,8 +232,8 @@
 	},
 	"stargaze-1": {
 		"name": "Stargaze",
-		"rpc": "https://rpc-stargaze-ia.cosmosia.notional.ventures",
-		"api": "https://api-stargaze-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-stargaze-c7rfwhgjeeczbglw-ie.internalendpoints.notional.ventures",
+		"api": "https://api-stargaze-gnyxchbqaucrwafd-ie.internalendpoints.notional.ventures",
 		"hash": "EF4A8B7D36CAFB700A6B27453A78637CBA2B8B88",
 		"clients": [
 			"07-tendermint-279"
@@ -254,8 +243,8 @@
 	},
 	"stride-1": {
 		"name": "Stride",
-		"rpc": "https://stride-rpc.polkachu.com",
-		"api": "https://stride-api.polkachu.com",
+		"rpc": "https://rpc-stride-ewdgpchtdztbbnnu-ie.internalendpoints.notional.ventures",
+		"api": "https://api-stride-pwhrqzkgxjvsbqhz-ie.internalendpoints.notional.ventures",
 		"hash": "1BB296700D6FCF2318AADA2D098E4D40479B6C7E",
 		"clients": [
 			"07-tendermint-126"
@@ -265,8 +254,8 @@
 	},
 	"phoenix-1": {
 		"name": "Terra 2.0",
-		"rpc": "https://terra-rpc.polkachu.com",
-		"api": "https://terra-api.polkachu.com",
+		"rpc": "https://rpc-terra2-dkhwvdfebur82wjj-ie.internalendpoints.notional.ventures",
+		"api": "https://api-terra2-jgeathg7x2mgvpcj-ie.internalendpoints.notional.ventures",
 		"hash": "",
 		"clients": [
 			"07-tendermint-226"
@@ -276,11 +265,22 @@
 	},
 	"umee-1": {
 		"name": "Umee",
-		"rpc": "https://rpc-umee-ia.cosmosia.notional.ventures",
-		"api": "https://api-umee-ia.cosmosia.notional.ventures",
+		"rpc": "https://rpc-umee-krsca29fr7y8jdb9-ie.internalendpoints.notional.ventures",
+		"api": "https://api-umee-jvyurdwrjstysm76-ie.internalendpoints.notional.ventures",
 		"hash": "2CB064741F8D8EE2C001EBADD557872266F5698C",
 		"clients": [
 			"07-tendermint-230"
+		],
+		"block_time": 6,
+		"hermes": "1.5"
+	},
+	"migaloo-1": {
+		"name": "WhiteWhale",
+		"rpc": "https://rpc-whitewhale-h93nh9ykmqnzbrez-ie.internalendpoints.notional.ventures",
+		"api": "https://api-whitewhale-hdp4lpezc2jpmdtv-ie.internalendpoints.notional.ventures",
+		"hash": "B8F80E90B3019465DF94B8984A0A4B2D26BC43CA",
+		"clients": [
+			"07-tendermint-92", "07-tendermint-110", "07-tendermint-108", "07-tendermint-113"
 		],
 		"block_time": 6,
 		"hermes": "1.5"
